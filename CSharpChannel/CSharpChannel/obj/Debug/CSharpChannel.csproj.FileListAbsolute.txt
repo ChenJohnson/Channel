@@ -1,0 +1,6 @@
+D:\Projects\github\CSharpChannel\CSharpChannel\bin\Debug\CSharpChannel.exe.config
+D:\Projects\github\CSharpChannel\CSharpChannel\bin\Debug\CSharpChannel.exe
+D:\Projects\github\CSharpChannel\CSharpChannel\bin\Debug\CSharpChannel.pdb
+D:\Projects\github\CSharpChannel\CSharpChannel\obj\Debug\CSharpChannel.csprojResolveAssemblyReference.cache
+D:\Projects\github\CSharpChannel\CSharpChannel\obj\Debug\CSharpChannel.exe
+D:\Projects\github\CSharpChannel\CSharpChannel\obj\Debug\CSharpChannel.pdb

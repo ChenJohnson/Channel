@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpChannel", "CSharpChannel\CSharpChannel.csproj", "{691C3EB2-B75E-438F-9EB7-66D39D7DCC61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{691C3EB2-B75E-438F-9EB7-66D39D7DCC61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{691C3EB2-B75E-438F-9EB7-66D39D7DCC61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{691C3EB2-B75E-438F-9EB7-66D39D7DCC61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{691C3EB2-B75E-438F-9EB7-66D39D7DCC61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
