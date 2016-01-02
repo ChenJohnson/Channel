@@ -14,11 +14,11 @@
 #include "CChannelQueue.h"
 
 template<class T>
-CChannelQueue::CChannelQueue(int iSize, T elem) {
+CChannelQueue<T>::CChannelQueue(int iSize, T elem) {
     mSize = iSize;
     mLstCapcity = new std::list<CElem<T>* >(iSize);
     for(int i = 0; i < mSize; i++){
-        mLstCapcity.push_back(new CElem(elem));
+        mLstCapcity.push_back(new CElem<T>(elem));
     }
     
     mLstReadWrite = new std::list<CElem<T>* >(iSize);
@@ -33,21 +33,27 @@ CChannelQueue::CChannelQueue(int iSize, T elem) {
     
 }*/
 
+
+
 template<class T>
-CChannelQueue::~CChannelQueue() {
-    std::list<CElem<T>*>::iterator iterCapcity = mLstCapcity.begin();
+CChannelQueue<T>::~CChannelQueue() {
+     //it;
+
+    typename std::list<CElem<T>*>::iterator iterCapcity = mLstCapcity.begin();
     while(iterCapcity != mLstCapcity.end()){
         delete *iterCapcity;
+        iterCapcity++;
     }
     
-    std::list<CElem<T>*>::iterator iterReadWrite = mLstReadWrite.begin();
+    typename std::list<CElem<T>*>::iterator iterReadWrite = mLstReadWrite.begin();
     while(iterReadWrite != mLstReadWrite.end()){
-        delete *iterCapcity;
+        delete *iterReadWrite;
+        iterReadWrite++;
     }    
 }
 
 template<class T>
-T CChannelQueue::readElem(){
+T CChannelQueue<T>::readElem(){
     pthread_mutex_lock(&mMutex);
     
     while(mLstReadWrite.size() <= 0){
@@ -69,7 +75,7 @@ T CChannelQueue::readElem(){
 }
 
 template<class T>
-void CChannelQueue::writeElem(T elem){
+void CChannelQueue<T>::writeElem(T elem){
     pthread_mutex_lock(&mMutex);
     
     while(mLstCapcity.size() <= 0){
